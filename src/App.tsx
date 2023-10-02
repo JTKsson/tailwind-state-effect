@@ -1,15 +1,14 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Body from './components/Body'
+import PokemonVote from './components/Pokemons'
 
 function App() {
 
   return (
     <>
     <Header/>
-    <Body/>
+    <PokemonVote/>
     <Footer/>
     </>
   )
