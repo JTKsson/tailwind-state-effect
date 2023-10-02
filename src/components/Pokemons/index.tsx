@@ -10,16 +10,16 @@ const PokemonVote = () => {
   const [winner, setWinner] = useState<string | null>(null);
 
   const voteBulbasaur = () => {
-    setBulbasaurVote(bulbasaurVote + 1)
-  } 
+    setBulbasaurVote(bulbasaurVote + 1);
+  };
 
   const voteCharmander = () => {
-    setCharmanderVote(charmanderVote + 1)
-  } 
+    setCharmanderVote(charmanderVote + 1);
+  };
 
   const voteSquirtle = () => {
-    setSquirtleVote(squirtleVote + 1)
-  } 
+    setSquirtleVote(squirtleVote + 1);
+  };
 
   const calculateWinner = () => {
     const votes: { [key: string]: number } = {
@@ -36,7 +36,9 @@ const PokemonVote = () => {
     if (winners.length === 1) {
       return `${winners[0]} is the winner with ${topVotes} votes!`;
     } else {
-      return `It's a tie between ${winners.join(" and ")} with ${topVotes} votes each!`;
+      return `It's a tie between ${winners.join(
+        " and "
+      )} with ${topVotes} votes each!`;
     }
   };
 
@@ -47,26 +49,28 @@ const PokemonVote = () => {
 
   return (
     <div>
-      <h2>{winner}</h2>
-      <div>
-        <h3>Bulbasaur</h3>
-        <img src={bulbasaur} alt="Bulbasaur" width="150px" />
-        <button onClick={voteBulbasaur}>Vote Bulbasaur</button>
-        <p>{bulbasaurVote}</p>
-      </div>
+      <h2 className="text-2xl">{winner}</h2>
+      <div className="flex flex-row">
+        <div>
+          <h3>Bulbasaur</h3>
+          <img src={bulbasaur} alt="Bulbasaur" width="150px" />
+          <button onClick={voteBulbasaur}>Vote Bulbasaur</button>
+          <p>{bulbasaurVote}</p>
+        </div>
 
-      <div>
-        <h3>Charmander</h3>
-        <img src={charmander} alt="Charmander" width="150px" />
-        <button onClick={voteCharmander}>Vote Charmander</button>
-        <p>{charmanderVote}</p>
-      </div>
+        <div>
+          <h3>Charmander</h3>
+          <img src={charmander} alt="Charmander" width="150px" />
+          <button onClick={voteCharmander}>Vote Charmander</button>
+          <p>{charmanderVote}</p>
+        </div>
 
-      <div>
-        <h3>Squirtle</h3>
-        <img src={squirtle} alt="Squirtle" width="150px" />
-        <button onClick={voteSquirtle}>Vote Squirtle</button>
-        <p>{squirtleVote}</p>
+        <div>
+          <h3>Squirtle</h3>
+          <img src={squirtle} alt="Squirtle" width="150px" />
+          <button onClick={voteSquirtle}>Vote Squirtle</button>
+          <p>{squirtleVote}</p>
+        </div>
       </div>
     </div>
   );
