@@ -14,17 +14,17 @@ export default {
       water: "#5a9ca4",
       yellow: "#ffcb05",
       blue: "#2a75bb",
+      red: "#f00000",
+      white: "#f0f0f0",
+      black: "#222224"
     },
 
     fontFamily: {
-      berkshire: ["Berkshire Swash", "serif"],
-      cinzel: ["Cinzel", "serif"]
+      pokemon: ["Pokemon Solid", "sans-serif"],
+      gabarito: ["Gabarito", "cursive"]
     },
 
-    extend: {
-      pokeCard: ["w-1/3", "flex", "flex-col", "p-4"],
-      voteButton: ["text-xl"],
-    },
+    extend: {},
   },
   plugins: [],
 }

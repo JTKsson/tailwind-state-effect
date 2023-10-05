@@ -52,29 +52,29 @@ const PokemonVote = () => {
   }, [bulbasaurVote, charmanderVote, squirtleVote]);
 
   return (
-    <div className="flex flex-col grow">
-      <h2 className="text-xl p-4">{winner}</h2>
-      <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col grow relative">
+      <h2 className="sticky top-0 text-lg md:text-2xl p-4 font-gabarito bg-black text-center text-white">{winner}</h2>
+      <div className="flex flex-col md:flex-row grow">
 
-        <div className="bg-grass md:w-1/3 flex flex-col p-4 items-center">
-          <h3>Bulbasaur</h3>
-          <img className="" src={bulbasaur} alt="Bulbasaur" width="150px" />
+        <div className="bg-grass md:w-1/3 flex flex-col p-4 items-center justify-center font-gabarito">
+          <h3 className="text-2xl">Bulbasaur</h3>
+          <img className="w-1/2 md:w-3/4" src={bulbasaur} alt="Bulbasaur" />
           <button className="bg-yellow border-2 border-blue rounded py-1 px-2 w-fit" onClick={voteBulbasaur}>Vote Bulbasaur</button>
-          <p>{bulbasaurVote}</p>
+          <p>{bulbasaurVote} votes</p>
         </div>
 
-        <div className="bg-fire md:w-1/3 flex flex-col p-4 items-center">
-          <h3>Charmander</h3>
-          <img src={charmander} alt="Charmander" width="150px" />
+        <div className="bg-fire md:w-1/3 flex flex-col p-4 items-center justify-center font-gabarito">
+          <h3 className="text-2xl">Charmander</h3>
+          <img className="w-1/2 md:w-3/4" src={charmander} alt="Charmander"/>
           <button className="bg-yellow border-2 border-blue rounded py-1 px-2 w-fit" onClick={voteCharmander}>Vote Charmander</button>
-          <p>{charmanderVote}</p>
+          <p>{charmanderVote} votes</p>
         </div>
 
-        <div className="bg-water md:w-1/3 flex flex-col p-4 items-center">
-          <h3>Squirtle</h3>
-          <img src={squirtle} alt="Squirtle" width="150px" />
+        <div className="bg-water md:w-1/3 flex flex-col p-4 items-center justify-center font-gabarito">
+          <h3 className="text-2xl">Squirtle</h3>
+          <img className="w-1/2 md:w-3/4" src={squirtle} alt="Squirtle"/>
           <button className="bg-yellow border-2 border-blue rounded py-1 px-2 w-fit" onClick={voteSquirtle}>Vote Squirtle</button>
-          <p>{squirtleVote}</p>
+          <p>{squirtleVote} votes</p>
         </div>
       </div>
     </div>

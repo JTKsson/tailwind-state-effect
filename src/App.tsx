@@ -6,11 +6,11 @@ import PokemonVote from './components/Pokemons'
 function App() {
 
   return (
-    <>
-    <Header/>
-    <PokemonVote/>
-    <Footer/>
-    </>
+    <div className="flex flex-col h-screen">
+      <Header />
+      <PokemonVote />
+      <Footer />
+    </div>
   )
 }
 
