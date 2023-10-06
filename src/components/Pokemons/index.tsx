@@ -9,15 +9,15 @@ const PokemonVote = () => {
   const [squirtleVote, setSquirtleVote] = useState<number>(0);
   const [winner, setWinner] = useState<string | null>(null);
 
-  const voteBulbasaur = () => {
+  const voteBulbasaur: () => void = () =>{
     setBulbasaurVote(bulbasaurVote + 1);
   };
 
-  const voteCharmander = () => {
+  const voteCharmander: () => void = () =>{
     setCharmanderVote(charmanderVote + 1);
   };
 
-  const voteSquirtle = () => {
+  const voteSquirtle: () => void = () =>{
     setSquirtleVote(squirtleVote + 1);
   };
 
